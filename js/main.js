@@ -1,3 +1,4 @@
+
 /*  Menu Show Y hideen */
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -70,10 +71,46 @@ tabs.forEach(tab =>{
 })
 
 /* Services Modal*/
+const modalViews = document.querySelectorAll('.services__modal'),
+      modalBtns = document.querySelectorAll('.services__button'),
+      modalCloses = document.querySelectorAll('.services__modal-close')
 
-/* Portfolio Swiper */
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () =>{
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalClose) =>{
+    modalClose.addEventListener('click', () =>{
+        modalViews.forEach((modalView) =>{
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
+
 
 /* Testimonal */
+let swiperTestimoninal = new Swiper('.testimoninal__container', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+});
 
 /* Scroll sections active link*/
 
