@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-/>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +8,7 @@
     <!-- Unicorns-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <!-- swiper css-->
-    <link rel="stylesheet" href="swiper-bundle.min.css">
+
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/styles.css">
@@ -21,22 +16,22 @@
     <title>Portifolio Website</title>
 </head>
 <body>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
     <!-- Header -->
     <header class="header" id="header">
          <nav class="nav contaier">
-             <a href="#" class="nav__logo"> Michael </a>
+             <a href="#" class="nav__logo"> Michael Massey </a>
 
              <div class="nav__menu" id="nav-menu">
                  <u1 class="nav__list grid">
                      <li class="nav__item">
-                         <a href="#home" class="nav__link">
+                         <a href="#home" class="nav__link" active-link>
                             <i class="uil uil-estate nav__icon"></i> Home
                          </a>
                      </li>
 
                      <li class="nav__item">
-                        <a href="#About" class="nav__link">
+                        <a href="#about" class="nav__link">
                             <i class="uil uil-user nav__icon"></i> About
                         </a>
                     </li>
@@ -55,8 +50,8 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portifolio   
+                        <a href="#project" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i> Interests   
                         </a>
                     </li>
                     <li class="nav__item">
@@ -70,6 +65,9 @@
              </div>
 
              <div class="nav__btns">
+                 <!--Theme change button -->
+                 <i class="uil uil-moonset change-theme" id="theme-button"></i>
+
                  <div class="nav__toggle" id="nav-toggle">
                     <i class="uil uil-apps"></i>
                  </div>
@@ -99,7 +97,7 @@
         </div>
 
             <div class="home__img">
-                <svg viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <mask id="mask0" mask-type="alpha">
                         <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
                         130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
@@ -129,7 +127,7 @@
 
         <div class="home__scroll">
             <a href="#about" class="home__scroll-button button--flex">
-                <i class="uil uil-mouse house_scroll-mouse"></i>
+                <i class="uil uil-mouse home__scroll-mouse"></i>
                 <span class="home__scroll-name">Scroll down</span>
                 <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
@@ -143,7 +141,7 @@
         <span class="section__subtitle">My introduction</span>
 
         <div class="about__container container grid">
-            <img src="" alt="" class="about__img">
+            <img src="imgs/2048px-Octicons-mark-github.svg.png" alt="" class="about__img">
 
             <div class="about__data">
                 <p class="about__description"> Web developer</p>
@@ -161,7 +159,7 @@
 
                     <div>
                         <span class="about__info-title">8+</span>
-                        <span class="about__info-name">Expertise <br>in different Programming languages</span>
+                        <span class="about__info-name">Expertise in different <br>  Programming languages</span>
                     </div>
                 </div>
 
@@ -459,7 +457,7 @@
 
     <!-- Services -->
     <section class="services section" id="services">
-        <h2 class="section__title">Beneficial Work Skills</h2>
+        <h2 class="section__title">Beneficial Qualities</h2>
         <span class="section__subtitle">How I benefit your organization.</span>
 
         <div class="services__container container grid">
@@ -467,7 +465,7 @@
             <div class="services__content">
                 <div>
                     <i class="uil uil-briefcase-alt services__icon"></i>
-                    <h3 class="services__title">Leadership <br> Qualities</h3>
+                    <h3 class="services__title">Work <br> Ethic</h3>
                 </div>
 
                 <span class="button button--flex button--small button--link services__button">
@@ -477,13 +475,13 @@
 
                 <div class="services__modal">
                     <div class="services__modal-content">
-                        <h4 class="services__modal-title">My Leadership <br> Qualities</h4>
+                        <h4 class="services__modal-title">My Work <br>Ethics</h4>
                         <i class="uil uil-times services__modal-close"></i>
 
                         <ul class="services__modal-services grid">
                             <li class="services__modal-services">
                                 <i class="uil uil-check-circle services__modal-icon"></i>
-                                <p>Reliability.</p>
+                                <p>Attention To detail.</p>
                             </li>
                             <li class="services__modal-services">
                                 <i class="uil uil-check-circle services__modal-icon"></i>
@@ -591,32 +589,39 @@
     </section>
 
     <!-- Project In Mind -->
-<section class="project section">
+<section class="project section" id="project">
     <div class="project__bg">
         <div class="project__container container grid">
             <div class="project__data">
                 <h2 class="project__title">My Interests</h2>
                 <p class="project__description">One of my major interests is anime as well as manga.</p>
 
-                <a href="#contact" class="button button--flex button--white">
-                    Contact Me
-                    <i class="uil uil-fast-mail project__icon button__icon"></i>
+                <a href="https://www.viz.com/" target="_blank" class="button button--flex button--white">
+                    VIZ.com
+                    <i class="uil uil-heart project__icon button__icon"></i>
                 </a>
             </div>
 
-            <img src="imgs/flcl-naota-and-guitar-6or0u0fd1mp1n4am (1).jpg" alt="" class="project__img">
+            <img src="imgs/7F58C795-20F9-473B-8A83-61275F9999D7.png" alt="" class="project__img">
 
         </div>
     </div>
 
 </section>
     <!-- Testimonial -->
+    <link  rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+    
     <section class="testimoninal section">
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <h2 class="section__title">My mini other Interests</h2>
         <span class="section__subtitle">Game developemetn/Manga/Machine Learning</span>
 
         <div class="testimoninal__container container swiper-container">
+            
             <div class="swiper-wrapper">
+                <div class="swiper-pagination swiper-pagination-testimoninal"></div>
                 <!--Testimonal 1-->
                 <div class="testimoninal__content swiper-slide">
                     <div class="testimoninal__data">
@@ -645,16 +650,16 @@
                         </div>
                     </div>
                 </div>
+                
 
             </div>
 
              <!-- Add Pagination -->
-             <div class="swiper-pagination swiper-pagination-testimoninal"></div>
+             
         </div>
 
     </section>
     <!-- Contact Me-->
-    <!--==================== CONTACT ME ====================-->
     <section class="contact section" id="contact">
         <h2 class="section__title">Contact Me</h2>
         <span class="section__subtitle">Get in touch</span>
@@ -736,6 +741,9 @@
                 <li>
                     <a href="#skills" class="footer__link">Technical Level</a>
                 </li>
+                <li>
+                    <a href="#about" class="footer__link">About Me</a>
+                </li>
             </ul>
 
             <div class="footer__socials">
@@ -756,6 +764,9 @@
     </footer>
 
     <!--Scroll Top -->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
     <!-- Main JS -->
     <script src="/js/main.js"></script>
